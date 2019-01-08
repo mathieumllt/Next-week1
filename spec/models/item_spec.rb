@@ -51,5 +51,4 @@ RSpec.describe Item, type: :model do
       it { expect(item.price).to eq(0) }
     end
   end
-
 end
