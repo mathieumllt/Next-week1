@@ -12,6 +12,7 @@
 							<thead>
 								<tr>
 									<th>Item</th>
+									<th>Categorie</th>
 									<th>Prix de départ</th>
 									<th>Pourcentage de remise</th>
 									<th>Prix</th>
@@ -23,6 +24,7 @@
 							  	<%=form_for item, :url => administration_item_path(item.id), :html => { :method => :put} do |f|%>
 							  		<tr>
 							  			<td><%= item.name %></td>
+							  			<td><%= item.category.name %></td>
 							  			<td><%= number_to_currency(item.original_price)%></td>
 							  			<td><%= f.number_field :discount_percentage %></td>
 							  			<td><%= number_to_currency(item.price)%></td>
