@@ -12,8 +12,7 @@ end
   Item.create!(
     original_price: Faker::Number.decimal(2),
     name: Faker::Coffee.blend_name,
-    category_id: rand(5)+1
+    category_id: rand(5) + 1
   )
   p "ITEM #{i} : créé"
 end
-
