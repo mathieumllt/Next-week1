@@ -10,9 +10,12 @@
 #  discount_percentage :integer          default(0)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  name                :string
 #
 
 class Item < ApplicationRecord
+  belongs_to :category
+
   def price
     if has_discount || discount_percentage != 0
       original_price * (1 - (discount_percentage.to_f / 100))
