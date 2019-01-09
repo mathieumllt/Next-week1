@@ -2,7 +2,8 @@
 
 1.upto(10) do |i|
   Item.create!(
-    original_price: Faker::Number.decimal(2)
+    original_price: Faker::Number.decimal(2),
+    name: Faker::Commerce.material
   )
   p "ITEM #{i} : créé"
 end
