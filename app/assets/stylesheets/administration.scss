@@ -52,3 +52,23 @@ body {
   color: red !important;
 }
 
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: meter;
+  font-weight: 600;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+[type=reset], [type=submit], button, html [type=button]:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+input:focus, textarea:focus, select:focus {
+        outline: none;
+}
