@@ -11,6 +11,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  name                :string
+#  category_id         :bigint(8)
 #
 
 require 'rails_helper'
