@@ -10,13 +10,14 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/shared/flash_messages", flash: flash %> 
+    
     <div class="wrapper">
       <div class="d-flex">
     
         <%= render partial: "layouts/administration/sidebar" %>
         <div class="main">
-
+        <%= render partial: "layouts/shared/flash_messages" %>   
+        
           <main class="content">
 
             <div class="container-fluid p-0">

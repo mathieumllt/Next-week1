@@ -1,9 +1,11 @@
-<div class="container" style="background-color: #05c46b;">
-	<% flash.each do |type, message| %>
-	  <div class="alert <%= bootstrap_class_for(type) %> fade in">
-	    <button class="close" data-dismiss="alert">×</button>
-	    <%= message %>
-	    <% end %>
-	  </div>
-</div>
+<% if notice %>
+	<div class='alert alert-success p-2'>
+		<%= notice %>
+	</div>
+<% end %>
 
+<% if alert %>
+	<div class='alert alert-danger p-2'>
+		<%= alert %>
+	</div>
+<% end %>

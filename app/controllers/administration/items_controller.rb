@@ -20,7 +20,7 @@ module Administration
       @item = Item.find(params[:id])
       puts @item.id
       if params[:item][:discount_percentage].to_f > 100
-        flash[:notice] = "Veuillez entrer une réduction valable"
+        flash[:alert] = "Veuillez entrer une réduction valable"
       else
         item_params = params.require(:item).permit(:discount_percentage)
         @item.update(item_params)
