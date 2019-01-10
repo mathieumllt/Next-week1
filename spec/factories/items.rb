@@ -16,9 +16,10 @@
 
 FactoryBot.define do
   factory :item do
+    name { Faker::Coffee.blend_name }
     original_price      { Faker::Number.decimal(2) }
     has_discount        { Faker::Boolean.boolean }
-    discount_percentage { Faker::Number.between(20, 80) }
+    category
 
     trait :with_discount do
       has_discount { true }
@@ -28,7 +29,9 @@ FactoryBot.define do
       has_discount { false }
     end
 
-    factory :item_with_discount, traits: %i[with_discount]
+    factory :item_with_discount, traits: %i[with_discount] do
+      discount_percentage { Faker::Number.between(0, 100) }
+    end
     factory :item_without_discount, traits: %i[without_discount]
   end
 end

@@ -13,7 +13,7 @@
 
 FactoryBot.define do
   factory :category do
-    name { "MyString" }
-    description { "MyText" }
+    name  { Faker::Coffee.variety }
+    description { Faker::Lorem.sentence }
   end
 end

@@ -22,6 +22,7 @@ RSpec.describe Item, type: :model do
 
     describe 'Database' do
       it { is_expected.to have_db_column(:id).of_type(:integer) }
+      it { is_expected.to have_db_column(:name).of_type(:string) }
       it { is_expected.to have_db_column(:original_price).of_type(:float).with_options(null: false) }
       it { is_expected.to have_db_column(:has_discount).of_type(:boolean).with_options(default: false) }
       it { is_expected.to have_db_column(:discount_percentage).of_type(:integer).with_options(default: 0) }
@@ -51,6 +52,22 @@ RSpec.describe Item, type: :model do
       let(:item) { build(:item_with_discount, original_price: 100.00, discount_percentage: 100) }
 
       it { expect(item.price).to eq(0) }
+    end
+  end
+
+  describe 'Item' do
+    context 'when item test validations' do
+      it { is_expected.to validate_presence_of(:original_price) }
+      it { is_expected.to validate_presence_of(:name) }
+      it { is_expected.to validate_presence_of(:category_id) }
+    end
+  end
+
+  describe 'Average methode is working ?' do
+    it 'Give the correct average price of 2 items' do
+      FactoryBot.create(:item_without_discount, original_price: 10)
+      FactoryBot.create(:item_without_discount, original_price: 10)
+      expect(Item.average_price).to eq(10)
     end
   end
 end
