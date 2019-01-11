@@ -3,13 +3,22 @@
 ## Done this week
 
 ✔️ Models
+
    Item
+   
    Category
    
 ✔️ View
 
+   Items
+
 ✔️ Controller
+
    Update
+
+✔️ Tests
+   
+  
    
 ## App specifications
 
