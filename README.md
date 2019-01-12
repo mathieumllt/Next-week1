@@ -1,5 +1,25 @@
 # README
 
+## Done this week
+
+✔️ Models
+
+   Item
+   
+   Category
+   
+✔️ View
+
+   Items
+
+✔️ Controller
+
+   Update
+
+✔️ Tests
+   
+  
+   
 ## App specifications
 
 * Ruby version : 2.5.3  
