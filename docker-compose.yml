@@ -3,7 +3,7 @@ services:
   redis:
     image: 'redis'
     ports:
-      - 127.0.0.1:6380:6379
+      - 127.0.0.1:6379:6379
   postgres:
     image: 'postgres:10.5-alpine'
     environment:
