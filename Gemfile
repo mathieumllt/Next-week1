@@ -26,12 +26,12 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'pry-byebug', '~> 3.6'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'sandi_meter', '~> 1.2'
-  gem 'dotenv-rails'
 end
 
 group :development do
