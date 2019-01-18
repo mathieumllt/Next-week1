@@ -12,3 +12,11 @@ Mailjet.configure do |config|
   # Otherwise, you can remove the dedicated line into config/initializers/mailjet.rb.
   config.api_version = 'v3.1'
 end
+variable = Mailjet::Send.create(
+    from_email: "mathieu.maillet@ymail.com",
+    from_name: "Mailjet Pilot",
+    subject: "Your email flight plan!",
+    text_part: "Dear passenger, welcome to Mailjet! May the delivery force be with you!",
+    html_part: "<h3>Dear passenger, welcome to Mailjet!</h3><br />May the delivery force be with you!",
+    recipients: [{ 'Email'=> 'passenger@mailjet.com'}]
+)
